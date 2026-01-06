@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--navigation entre les different page-->
+<div class="navigation-pages">
+    <button id="pagePrev">◀</button>
+    <button id="pageNext">▶</button>
+</div>
+
+
+
+    <!--<h1>Mon application</h1>
+    <button onclick="direBonjour()">Clique-moi</button> -->
+	
+	<!-- <h1 id="moisAnnee"></h1>
+
+	<div class="calendrier">
+		<div class="jours-semaine">
+			<div>Lun</div><div>Mar</div><div>Mer</div>
+			<div>Jeu</div><div>Ven</div><div>Sam</div><div>Dim</div>
+		</div>
+
+		<div id="jours" class="jours"></div>
+	</div> -->
+<!--calendrier-->
+<div class="navigation"> <!-- navigation pour les mois du calendrier-->
+    <button id="precedent">◀</button>
+    <h2 id="moisAnnee"></h2>
+    <button id="suivant">▶</button>
+</div>
+
+<div class="calendrier">
+    <div class="jours-semaine">
+        <div>Lun</div><div>Mar</div><div>Mer</div>
+        <div>Jeu</div><div>Ven</div><div>Sam</div><div>Dim</div>
+    </div>
+    <div id="jours" class="jours"></div>
+</div>
+
+
+<!--carte-->
+
+
+<div id="compteur">Jours cochés : 0</div>
+
+<div id="carte-container" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:1000;">
+    <div id="carte" class="carte">
+        <img id="face-dos" src="dos.png" alt="Dos de carte">
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

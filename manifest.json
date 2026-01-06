@@ -1,0 +1,20 @@
+{
+  "name": "Objectif Sport",
+  "short_name": "Sport",
+  "start_url": "calendrier.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "face1.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "face1.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

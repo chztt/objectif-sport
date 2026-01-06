@@ -1,0 +1,31 @@
+<!-- collection.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Ma collection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<div class="navigation-pages">
+    <button id="pagePrev">◀</button>
+    <button id="pageNext">▶</button>
+</div>
+
+<div id="collection">
+    <div class="case" data-id="1"></div>
+    <div class="case" data-id="2"></div>
+</div>
+
+<script src="collection.js"></script>
+<script>
+for(let key in localStorage){
+    console.log(key, localStorage[key]);
+}
+</script>
+
+</body>
+</html>
