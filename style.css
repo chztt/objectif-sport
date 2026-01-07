@@ -3,16 +3,21 @@ body {
     text-align: center;
 }
 
+/* ===================== */
+/* CALENDRIER */
+/* ===================== */
+
 .navigation {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 10px;
+    gap: 40px;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .calendrier {
-    width: 320px;
+    width: 600px; /* AVANT: 320px */
     margin: auto;
 }
 
@@ -22,13 +27,14 @@ body {
 }
 
 .jour {
-    padding: 10px;
-    margin: 2px;
-    border-radius: 6px;
+    padding: 18px;          /* AVANT: 10px */
+    margin: 4px;            /* AVANT: 2px */
+    border-radius: 8px;
     cursor: pointer;
-    background-color: white; /* toutes les cases blanches par défaut */
+    background-color: white;
     color: black;
     border: 1px solid #ccc;
+    font-size: 18px;        /* AJOUT */
 }
 
 /* jour coché */
@@ -39,7 +45,7 @@ body {
 
 /* aujourd’hui */
 .aujourdhui {
-    border: 2px solid #4CAF50;
+    border: 3px solid #4CAF50; /* AVANT: 2px */
 }
 
 /* jour bloqué futur */
@@ -51,26 +57,27 @@ body {
 
 /* compteur */
 #compteur {
-    margin: 15px;
+    margin: 20px;
     font-weight: bold;
+    font-size: 22px;
 }
 
-
-
-/*carte*/
+/* ===================== */
+/* CARTES */
+/* ===================== */
 
 .carte {
-    width:150px;
-    height:200px;
-    perspective:1000px;
-    cursor:pointer;
+    width: 200px;   /* AVANT: 150px */
+    height: 280px;  /* AVANT: 200px */
+    perspective: 1000px;
+    cursor: pointer;
 }
 
 .carte img {
-    width:100%;
-    height:100%;
-    border-radius:10px;
-    backface-visibility:hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    backface-visibility: hidden;
     transition: transform 0.6s;
 }
 
@@ -78,100 +85,52 @@ body {
     transform: rotateY(180deg);
 }
 
+/* ===================== */
+/* COLLECTION */
+/* ===================== */
 
-#collection{
-    display:grid;
-    grid-template-columns: repeat(2, 100px);
-    gap:10px;
-}
-.case{
-    width:100px;
-    height:150px;
-    background-color:#ccc; /* grise si pas collectée */
-    border-radius:10px;
-}
-.case img{
-    width:100%;
-    height:100%;
+#collection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* MAX 4 PAR LIGNE */
+    gap: 16px;
+    max-width: 900px;
+    margin: auto;
 }
 
+.case {
+    width: 100%;
+    height: 180px;  /* AVANT: 150px */
+    background-color: #ccc;
+    border-radius: 14px;
+}
 
+.case img {
+    width: 100%;
+    height: 100%;
+}
 
-/*changement de page */
+/* ===================== */
+/* NAVIGATION PAGES */
+/* ===================== */
 
-.navigation-pages{
+.navigation-pages {
     display: flex;
     justify-content: center;
-    gap: 80px;
-    margin: 10px 0 15px;
+    gap: 120px; /* AVANT: 80px */
+    margin: 20px 0 25px;
 }
 
-.navigation-pages button{
-    font-size: 28px;
+.navigation-pages button {
+    font-size: 36px; /* AVANT: 28px */
     background: none;
     border: none;
     color: black;
     cursor: pointer;
 }
 
-.navigation-pages button:disabled{
+.navigation-pages button:disabled {
     color: #ccc;
     cursor: not-allowed;
 }
 
-/* ========================= */
-/* VERSION TELEPHONE */
-/* ========================= */
-@media (max-width: 600px) {
 
-    /* calendrier plus large */
-    .calendrier {
-        width: 95%;
-    }
-
-    /* cases du calendrier plus grandes */
-    .jour {
-        padding: 16px;
-        margin: 4px;
-        font-size: 18px;
-    }
-
-    /* navigation (mois / flèches) */
-    .navigation {
-        gap: 30px;
-        font-size: 22px;
-    }
-
-    /* compteur */
-    #compteur {
-        font-size: 20px;
-    }
-
-    /* ========================= */
-    /* CARTES */
-    /* ========================= */
-
-    .carte {
-        width: 180px;
-        height: 240px;
-    }
-
-    /* ========================= */
-    /* COLLECTION : MAX 4 PAR LIGNE */
-    /* ========================= */
-
-    #collection {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-    }
-
-    .case {
-        width: 100%;
-        height: 140px;
-    }
-
-    /* boutons changement de page */
-    .navigation-pages button {
-        font-size: 34px;
-    }
-}
