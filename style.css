@@ -118,3 +118,60 @@ body {
     color: #ccc;
     cursor: not-allowed;
 }
+
+/* ========================= */
+/* VERSION TELEPHONE */
+/* ========================= */
+@media (max-width: 600px) {
+
+    /* calendrier plus large */
+    .calendrier {
+        width: 95%;
+    }
+
+    /* cases du calendrier plus grandes */
+    .jour {
+        padding: 16px;
+        margin: 4px;
+        font-size: 18px;
+    }
+
+    /* navigation (mois / flèches) */
+    .navigation {
+        gap: 30px;
+        font-size: 22px;
+    }
+
+    /* compteur */
+    #compteur {
+        font-size: 20px;
+    }
+
+    /* ========================= */
+    /* CARTES */
+    /* ========================= */
+
+    .carte {
+        width: 180px;
+        height: 240px;
+    }
+
+    /* ========================= */
+    /* COLLECTION : MAX 4 PAR LIGNE */
+    /* ========================= */
+
+    #collection {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    .case {
+        width: 100%;
+        height: 140px;
+    }
+
+    /* boutons changement de page */
+    .navigation-pages button {
+        font-size: 34px;
+    }
+}
