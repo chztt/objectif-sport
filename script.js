@@ -104,7 +104,7 @@ function chargerCalendrier(){
     
     if(dateJour <= aujourdHui && dateJour >= debut && dateJour <= fin){
     div.addEventListener("click", ()=>{
-        //if(div.classList.contains("coche")) return;
+    if(div.classList.contains("coche")) return;
 
         div.classList.add("coche");
         localStorage.setItem(key,"true");
@@ -222,5 +222,6 @@ function ajouterCollection(id){//src){
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");
 }
+
 
 
